@@ -6,7 +6,7 @@ A premium car dealership website built from scratch with vanilla HTML, CSS, and 
 
 [View the live site](https://akujobidaniel.netlify.app/dozmotors/)
 
-![Doz Motors screenshot](./Doz-motors.png)
+![Doz Motors screenshot](./dozmotors-img/Doz-motors.png)
 
 ## 📖 Overview
 
