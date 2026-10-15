@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Georgia", serif;
+    background-color: #FAF7F2;
+    color: #1A1A1A;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Georgia", serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    background-color: #FAF7F2;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #B8860B;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+}
+
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 6%;
+    background: linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+    color: #FFFFFF;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    color: #D4AF37;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    max-width: 600px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text {
+    max-width: 480px;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #D4AF37;
+    color: #1A1A1A;
+    padding: 14px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    width: fit-content;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #FFFFFF;
+}
+
+.btn-secondary {
+    display: inline-block;
+    margin-top: 30px;
+    border: 2px solid #1A1A1A;
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+
+/* FEATURED CARS */
+.featured {
+    padding: 80px 6%;
+    text-align: center;
+}
+
+.featured h2 {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+.car-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-6px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.car-card h3 {
+    font-size: 1.3rem;
+    margin: 20px 20px 5px;
+}
+
+.car-meta {
+    font-size: 0.9rem;
+    color: #777;
+    margin: 0 20px 10px;
+}
+
+.car-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #B8860B;
+    margin: 0 20px 20px;
+}
+
+/* ABOUT */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+
+.about img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+}
+
+.about-content {
+    padding: 60px 8%;
+}
+
+.about-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+}
+
+.stats strong {
+    display: block;
+    font-size: 1.8rem;
+    color: #D4AF37;
+}
+
+.stats span {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #FAF7F2;
+    font-size: 0.85rem;
+    color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .car-grid {
+        grid-template-columns: 1fr;
+    }
+    .about {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .hero-bg {
+        object-position: center 30%;
+    }
+}
+
+.page-intro {
+    text-align: center;
+    padding: 80px 6% 40px;
+}
+
+.eyebrow-dark {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: #B8860B;
+    margin-bottom: 15px;
+}
+
+.page-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.page-intro p {
+    max-width: 500px;
+    margin: 0 auto;
+    color: #555;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 0 6% 40px;
+}
+
+.filter-btn {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.15);
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: #D4AF37;
+}
+
+.filter-btn.active {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    border-color: #1A1A1A;
+}
+
+.car-grid-section {
+    padding: 0 6% 80px;
+}
+
+
+.back-to-top {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #1A1A1A;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.back-to-top svg {
+    width: 22px;
+    height: 22px;
+}
+
+.back-to-top:hover {
+    background-color: #D4AF37;
+    color: #1A1A1A;
+    transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+    .back-to-top {
+        width: 44px;
+        height: 44px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
